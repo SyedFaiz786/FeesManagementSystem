@@ -1,0 +1,241 @@
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+body{
+  margin-bottom:10px;
+}
+#username , #pwd{
+  width:auto;
+}
+nav{
+  background: slateblue;
+  font-size: larger;
+}
+.container a{
+  color:white;
+}
+form{
+  padding-top:10px;
+  padding-bottom: 10px;
+  padding-left:10px;
+  margin-left:10px;
+  border-radius:10px;
+  box-shadow:10px 10px 40px rgb(128, 128, 128);
+  justify-content: center;
+}
+form  input{
+  width:auto;
+  border-radius:10px;
+}
+form button{
+  background:lightslategray;
+  padding:5px;
+  margin:5px;
+  color:white;
+  font-weight:500;
+  font-size:large;
+  border-radius:10px;
+  box-shadow:5px 5px 10px black;
+  border:none;
+  width:80%;
+}
+form select{
+  background:blueviolet;
+  color:white;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius:10px;
+}
+form .row div{
+  display: inline-block;
+}
+form .row div select{
+  width:100%;
+}
+#details{
+  overflow:scroll;
+}
+thead{
+  background:slateblue;
+  color:white;
+}
+td{
+  font-size: 12px;
+}
+.notification1{   cursor : pointer;
+color:white
+}
+
+.sidenav1 {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  color:white;
+}
+
+
+.sidenav1 a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  transition: 0.3s;
+}
+
+
+.sidenav1 a:hover {
+  color: #f1f1f1;
+}
+
+
+.sidenav1 .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+.sidenav1 .login-container1 {
+
+  padding: 20px;
+}
+.sidenav1 .login-container1 button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  color:white;
+}
+
+.sidenav1 .login-container1 button:hover {
+  background: #ccc;
+}
+
+.approvediv1{
+  background-color:white;
+  color:black;
+  width:100%;
+overflow:hidden;
+ 
+}
+
+.approvediv1 button{
+  background-color:white;
+  color:black;
+  width:50%;
+overflow:hidden;
+
+}
+
+  .notification{
+    cursor : pointer;
+    color:white
+    }
+    
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 60px;
+      transition: 0.5s;
+      color:white;
+    }
+    
+    
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    
+    
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+    
+    
+    .sidenav .login-container {
+    
+      padding: 20px;
+    }
+    .sidenav .login-container button {
+      float: right;
+      padding: 6px;
+      margin-top: 8px;
+      margin-right: 16px;
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
+      color:white;
+    }
+    
+    .sidenav .login-container button:hover {
+      background: #ccc;
+    }
+    
+    .approvediv{
+      background-color:white;
+      color:black;
+      width:100%;
+    overflow:hidden;
+     
+    }
+    
+    .approvediv button{
+      background-color:white;
+      color:black;
+      width:50%;
+    overflow:hidden;
+    
+    }
+    .closebtn {
+      cursor: pointer;
+    }
+.print{
+margin-left:auto;
+margin-right:auto;
+width:20%;
+border-radius: 5px;
+background-color: rgb(255, 0, 0);
+}
+.notify{
+ background-color:rgb(205, 166, 166);
+ border-radius:20px;
+ padding:3px;
+}
+table , th , td ,tr{
+  border:0.5px solid black;
+  border-spacing:0;
+}
