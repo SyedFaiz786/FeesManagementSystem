@@ -9,7 +9,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect('mongodb://127.0.0.1:27017/FMS');
+mongoose.connect('mongodb+srv://syedmohmedfaizrozdar:9550982863@cluster0.nxc5pqi.mongodb.net/FMS');
 
 app.listen(3001, () => {
     console.log("server is running")
