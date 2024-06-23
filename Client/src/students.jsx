@@ -48,7 +48,7 @@ const [number,updatenumber]=useState([])
   useEffect(() => {
     const getStudents = async () => {
       const user = JSON.parse(localStorage.getItem('user'));
-      const response = await axios.get(`http://localhost:3001/getAllStudents?id=${user.id}`);
+      const response = await axios.get(`https://fees-management-system.onrender.com/getAllStudents?id=${user.id}`);
       setStudentList(response.data);
 
     }
@@ -93,7 +93,7 @@ const [number,updatenumber]=useState([])
     console.log(JSON.stringify(studentList))
     console.log(item)
   
-    const res = await axios.put(`http://localhost:3001/approve?id=${item._id}`)
+    const res = await axios.put(`https://fees-management-system.onrender.com/approve?id=${item._id}`)
     setApprovedList([...approvedList, res.data]);
 
     // delete approved record in studentList 
@@ -104,7 +104,7 @@ const [number,updatenumber]=useState([])
 
 
   const disapprove = async (item) => {
-    const res = await axios.delete(`http://localhost:3001/disapprove?id=${item._id}`)
+    const res = await axios.delete(`https://fees-management-system.onrender.com/disapprove?id=${item._id}`)
     setApprovedList([...approvedList,res.data]);
     const filterItems = studentList.filter(x => x._id !== item._id);
     setStudentList(filterItems);
@@ -112,7 +112,7 @@ const [number,updatenumber]=useState([])
 
   
    const handledisapprove = async (item) => {
-    const value = await axios.put(`http://localhost:3001/disaproveupdates?id=${item._id}`)
+    const value = await axios.put(`https://fees-management-system.onrender.com/disaproveupdates?id=${item._id}`)
     window.location.reload();
    }
 
@@ -150,7 +150,7 @@ const handleButtonClick=async(item)=>{
   const newuniversity=parseFloat(item.paiduniversityfee)+parseFloat(item.paymentdetails.university)
   const paid=parseFloat(item.paidtutionfee)+parseFloat(item.paidtransportfee)+parseFloat(item.paidhostelfee)+parseFloat(item.paidskilldevfee)+parseFloat(item.paiduniversityfee)+parseFloat(paytution)+parseFloat(paytransport)+parseFloat(payhostel)+parseFloat(payskilldev)+parseFloat(payuniversity);
   const balance=parseFloat(item.totalfee)-paid
-  const value=await axios.put(`http://localhost:3001/newupdates?id=${item._id}`,{
+  const value=await axios.put(`https://fees-management-system.onrender.com/newupdates?id=${item._id}`,{
     paytransport,
     paytution,
     payhostel,

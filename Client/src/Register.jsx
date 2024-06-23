@@ -8,7 +8,7 @@ function Register(){
 
     const handleClick=(e)=>{
         e.preventDefault()
-        axios.post('http://localhost:3001/register',{name,password})
+        axios.post('https://fees-management-system.onrender.com/register',{name,password})
         .then(answer=>{console.log(answer)})
         .catch(err=>{console.log(err)})
 

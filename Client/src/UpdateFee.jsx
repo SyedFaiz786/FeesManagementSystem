@@ -31,7 +31,7 @@
 //     const getLocalStorageValue = async () => {
 //       try {
 //         const storedValue = JSON.parse(localStorage.getItem('user'))
-//         const response = await axios.get(`http://localhost:3001/getstudents?id=${storedValue.id}`)
+//         const response = await axios.get(`https://fees-management-system.onrender.com/getstudents?id=${storedValue.id}`)
 //         setUser(response.data);
 //       } catch (error) {
 //         console.error('Error retrieving value from localStorage:', error);
@@ -45,7 +45,7 @@
 //     const getLocalStorageValue = async () => {
 //       try {
 //         const storedValue = JSON.parse(localStorage.getItem('user'))
-//         const response = await axios.put(`http://localhost:3001/updatevalue?id=${storedValue.id}`,{
+//         const response = await axios.put(`https://fees-management-system.onrender.com/updatevalue?id=${storedValue.id}`,{
 //         newtutionfee,
 //         newtransportfee,
 //         newskilldevfee,
@@ -153,7 +153,7 @@ function UpdateFee() {
             const getLocalStorageValue = async () => {
               try {
                 const storedValue = JSON.parse(localStorage.getItem('user'))
-                const response = await axios.get(`http://localhost:3001/getstudents?id=${storedValue.id}`)
+                const response = await axios.get(`https://fees-management-system.onrender.com/getstudents?id=${storedValue.id}`)
                 setUser(response.data);
               } catch (error) {
                 console.error('Error retrieving value from localStorage:', error);
@@ -167,7 +167,7 @@ function UpdateFee() {
             const getLocalStorageValue = async () => {
               try {
                 const storedValue = JSON.parse(localStorage.getItem('user'))
-                const response = await axios.put(`http://localhost:3001/updatevalue?id=${storedValue.id}`,{
+                const response = await axios.put(`https://fees-management-system.onrender.com/updatevalue?id=${storedValue.id}`,{
                 newtutionfee,
                 newtransportfee,
                 newskilldevfee,

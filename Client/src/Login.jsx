@@ -12,7 +12,7 @@ function Login() {
    
     const handleClick = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:3001/login', {
+        axios.post('https://fees-management-system.onrender.com/login', {
             name,
             password,
             role:'s',
@@ -40,7 +40,7 @@ function Login() {
      
     const handleMentorSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:3001/login', {
+        axios.post('https://fees-management-system.onrender.com/login', {
             name,
             password,
             role :'m',
