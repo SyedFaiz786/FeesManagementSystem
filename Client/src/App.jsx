@@ -14,6 +14,7 @@ function App() {
       
         <Route path='/register' element={<Register/>}/>
         <Route path='/login' element = {<Login/>}/>
+        <Route path='/' element = {<Login/>}/>
         <Route path='/stdreg' element = {<StdReg/>}/>
         <Route path='/students' element={<Student/>}/>
         <Route path='/studentdetails' element={<Studentdetails/>}/>
