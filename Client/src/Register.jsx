@@ -1,15 +1,22 @@
 import {useState} from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+
 import './register.css'
+
+
 function Register(){
-    
+    const navigate = useNavigate()
     const [name,updateName]=useState()
     const [password,updatePassword]=useState()
 
     const handleClick=(e)=>{
         e.preventDefault()
         axios.post('https://fees-management-system.onrender.com/register',{name,password})
-        .then(answer=>{console.log(answer)})
+        .then(answer=>{console.log(answer)
+            navigate('/login')
+                alert('successful')
+        })
         .catch(err=>{console.log(err)})
 
     }
