@@ -134,7 +134,7 @@ function Login() {
                                 <label for="password">password</label>
                                 <input type="password" className="form-control" id="studentID" name="studentID" required/>
                             </div>
-                            < Link to="/students" className='text-primary'>Sign Up/Register</Link>
+                            < Link to="#" className='text-primary'>Sign Up/Register</Link>
                             <br/>
                             <br/>
                             < a href="#" className='text-dark'>Forget Password</a>

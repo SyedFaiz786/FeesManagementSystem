@@ -70,7 +70,23 @@ app.post('/stdreg', async (req, res) => {
     res.json(studentdetails)
 })
 
+app.get('/register', async (req, res) => {
+    try {
+        const users = await UserModel.find();
+        res.json(users);
+    } catch (err) {
+        res.status(500).json({ msg: 'Error fetching users', error: err });
+    }
+});
 
+app.get('/stdreg', async (req, res) => {
+    try {
+        const students = await StudentModel2.find();
+        res.json(students);
+    } catch (err) {
+        res.status(500).json({ msg: 'Error fetching students', error: err });
+    }
+});
 
 app.post('/login', async (req, res) => {
     const { name, password, role } = req.body;
