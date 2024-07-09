@@ -88,6 +88,28 @@ app.get('/stdreg', async (req, res) => {
     }
 });
 
+app.get('/checkRoll', async (req, res) => {
+    const { roll } = req.query;
+    const student = await StudentModel2.findOne({ roll });
+    if (student) {
+        res.status(200).json({ exists: true });
+    } else {
+        res.status(200).json({ exists: false });
+    }
+});
+
+
+app.get('/checkMentor', async (req, res) => {
+    const { name } = req.query;
+    const mentor = await UserModel.findOne({ name });
+    if (mentor) {
+        res.status(200).json({ exists: true });
+    } else {
+        res.status(200).json({ exists: false });
+    }
+});
+
+
 app.post('/login', async (req, res) => {
     const { name, password, role } = req.body;
     const user = (role === 's' ? await StudentModel2.findOne({ name: name, password: password }) : await UserModel.findOne({ name: name, password: password }));
