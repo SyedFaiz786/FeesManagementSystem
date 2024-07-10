@@ -35,6 +35,16 @@ app.delete('/disapprove',async(req,res)=>{
     const student=await StudentModel2.findOneAndDelete({_id:id},{notapproved:true})
 })
 
+app.get('/students', async (req, res) => {
+    const { roll } = req.query;
+    const student = await StudentModel2.findOne({ roll });
+    if (student) {
+        res.status(200).json(student);
+    } else {
+        res.status(404).json({ msg: "No student found with this roll number" });
+    }
+});
+
 
 app.put('/updatevalue',async (req,res)=>{
     const {id}=req.query;
