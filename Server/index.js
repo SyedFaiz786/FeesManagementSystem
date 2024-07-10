@@ -36,12 +36,14 @@ app.delete('/disapprove',async(req,res)=>{
 })
 
 app.get('/students', async (req, res) => {
-    const { roll } = req.query;
-    const student = await StudentModel2.findOne({ roll });
-    if (student) {
-        res.status(200).json(student);
-    } else {
-        res.status(404).json({ msg: "No student found with this roll number" });
+    const { id } = req.query; 
+    const userList = await StudentModel2.find({ mentorId: id }); 
+
+    if (userList) {
+        res.json(userList);
+    }
+    else {
+        res.status(500).send({ msg: "no record exist" })
     }
 });
 
